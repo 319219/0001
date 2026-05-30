@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>聯絡我們 - 漲價屋風格3C</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-text">漲價屋風格 - 門市與聯絡資訊</div>
+    </header>
+    
+    <nav>
+        <a href="index.html">首頁</a> | 
+        <a href="about.html">店家介紹</a> | 
+        <a href="product.html">商品總覽</a> | 
+        <a href="story.html">相關資訊</a> | 
+        <a href="information.html">聯絡資訊</a>
+    </nav>
+
+    <div class="main-layout">
+        <div class="content-area" style="flex:1;">
+            <h2>📍 全台門市據點</h2>
+            <table class="coolpc-table">
+                <thead>
+                    <tr>
+                        <th>門市名稱</th>
+                        <th>聯絡電話</th>
+                        <th>營業地址</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>台北總店 (網路部)</td>
+                        <td>(02) 2345-6789</td>
+                        <td>台北市中正區八德路一段 XX 號</td>
+                    </tr>
+                    <tr>
+                        <td>台中英才店</td>
+                        <td>(04) 2234-5678</td>
+                        <td>台中市西區英才路 XX 號</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 style="margin-top:30px;">📬 線上聯絡與網路編單回報</h2>
+            <div class="warning-box">網路下單者，若已完成匯款，請填寫下方表單以便快速出貨。</div>
+            
+            <form id="feedbackForm" style="background:#0f172a; padding:20px; border:1px solid #334155;">
+                <p>客戶姓名：<input type="text" id="custName" style="background:#1e293b; color:#fff; border:1px solid #334155; padding:5px;"></p>
+                <p>聯絡電話：<input type="text" id="custPhone" style="background:#1e293b; color:#fff; border:1px solid #334155; padding:5px;"></p>
+                <p>電子信箱：<input type="email" id="custEmail" style="background:#1e293b; color:#fff; border:1px solid #334155; padding:5px;"></p>
+                <p>您的事由：
+                    <select id="custSubject" style="background:#1e293b; color:#fff; border:1px solid #334155; padding:5px;">
+                        <option>網路匯款回報</option>
+                        <option>新品不良報修</option>
+                        <option>大宗採購詢價</option>
+                    </select>
+                </p>
+                <p>留言內容：<br><textarea id="custMsg" rows="4" style="width:100%; background:#1e293b; color:#fff; border:1px solid #334155;"></textarea></p>
+                
+                <button type="button" id="submitBtn" style="background:#f59e0b; color:#000; font-weight:bold; border:none; padding:8px 20px; cursor:pointer;">
+                    🚀 送出訊息到後端
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+       <p>網頁中所有產品型號、價格與圖片均為非真實數據。</p>
+        <p>&copy; 2026 漲價屋風格 3C 專賣店 版權所有. 本網站僅供網頁設計練習使用.</p>
+    </footer>
+
+   <script src="scripts.js"></script>
+</body>
+</html>
