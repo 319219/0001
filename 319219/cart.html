@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>您的線上估價單明細 - 漲價屋</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><div class="logo-text">COOLPC 漲價屋 - 購物車明細</div></header>
+    <nav><a href="index.html">首頁</a> | <a href="about.html">店家介紹</a> | <a href="product.html">商品總覽</a> | <a href="story.html">相關資訊</a> | <a href="information.html">聯絡資訊</a></nav>
+
+    <div class="main-layout">
+        <div class="content-area" style="flex:1;">
+            <h2>🛒 您的預算估價單 (暫存項目)</h2>
+            <div class="warning-box">💡 提示：本單開立後可保留 24 小時。請攜帶代碼至門市取貨。</div>
+
+            <table class="coolpc-table">
+                <thead>
+                    <tr>
+                        <th width="10%">刪除</th>
+                        <th width="60%">已選購品項名稱</th>
+                        <th width="10%">數量</th>
+                        <th width="20%">小計 (含稅)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#" style="color:#ef4444;">[刪除]</a></td>
+                        <td>【AI旗艦】CyberPower X1 處理器 (16核/32緒)</td>
+                        <td>1</td>
+                        <td class="coolpc-price">$29,900</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" style="color:#ef4444;">[刪除]</a></td>
+                        <td>【高速傳輸】Titan 2TB NVMe M.2 固態硬碟</td>
+                        <td>1</td>
+                        <td class="coolpc-price">$4,500</td>
+                    </tr>
+                    <tr style="background:#1e3a8a;">
+                        <td colspan="3" style="text-align:right; font-weight:bold; color:#fff;">總計金額：</td>
+                        <td class="coolpc-price" style="font-size:16px; color:#f59e0b;">$34,400</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top:20px; text-align:right;">
+                <button style="background:#64748b; color:white; border:none; padding:10px 20px; font-weight:bold; cursor:pointer; margin-right:10px;">🖨️ 列印此估價單</button>
+                <button style="background:#22c55e; color:black; border:none; padding:10px 20px; font-weight:bold; cursor:pointer;" onclick="alert('訂單已送出！網路部將於1小時內電話與您確認規格。')">🚀 送出訂單，前往門市取貨</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>網頁中所有產品型號、價格與圖片均為非真實數據。</p>
+        <p>&copy; 2026 原價屋酷斃風格 3C 專賣店 版權所有. 本網站僅供網頁設計練習使用.</p>
+    </footer>
+</body>
+</html>
