@@ -1,4 +1,3 @@
-/* 原價屋經典硬核科技風 */
 body {
     font-family: "Courier New", Arial, sans-serif;
     background-color: #0f172a; /* 深藍黑背景 */
@@ -165,4 +164,110 @@ footer {
     margin-top: 40px;
     border-top: 2px solid #334155;
     font-size: 11px;
+}
+/* 讓商品區塊內的圖片大小整齊劃一 */
+.content-area img {
+    width: 320px;          /* 限制圖片的寬度，你可以自由調整這個數值 */
+    height: 184px;         /* 固定高度（1000*574 的比例大約是 320*184） */
+    object-fit: cover;     /* 精華所在：自動裁剪多餘部分，保證圖片不變形、不拉伸 */
+    border-radius: 4px;    /* 稍微加點圓角，看起來更有質感 */
+} 
+/* ==========================================
+   🎮 3C 迷你小遊戲懸浮視窗樣式
+   ========================================== */
+#game-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+}
+
+/* 遊戲啟動按鈕 */
+#game-toggle-btn {
+    background: linear-gradient(135deg, #ef4444, #f59e0b);
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    font-size: 14px;
+}
+#game-toggle-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+/* 遊戲主畫布容器 */
+#game-container {
+    display: none; /* 預設隱藏 */
+    width: 300px;
+    background-color: #1e293b;
+    border: 3px solid #f59e0b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    text-align: center;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.game-title {
+    color: #f59e0b;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.game-close-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 16px;
+}
+.game-close-btn:hover {
+    color: #fff;
+}
+
+/* 遊戲 Canvas */
+#gameCanvas {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    display: block;
+    margin: 0 auto;
+    cursor: none; /* 在畫布內隱藏滑鼠，改用籃子 */
+}
+
+.game-controls {
+    margin-top: 10px;
+}
+
+.game-btn {
+    background-color: #22c55e;
+    color: #000;
+    border: none;
+    padding: 5px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 3px;
+}
+.game-btn:hover {
+    background-color: #4ade80;
+}
+
+#game-score {
+    color: #38bdf8;
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 13px;
 }
