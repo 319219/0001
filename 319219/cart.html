@@ -7,52 +7,60 @@
 </head>
 <body>
     <header><div class="logo-text">COOLPC 漲價屋 - 購物車明細</div></header>
-    <nav><a href="index.html">首頁</a> | <a href="about.html">店家介紹</a> | <a href="product.html">商品總覽</a> | <a href="story.html">相關資訊</a> | <a href="information.html">聯絡資訊</a></nav>
+    <nav>
+        <a href="index.html">首頁</a> | 
+        <a href="about.html">店家介紹</a> | 
+        <a href="product.html">商品總覽</a> | 
+        <a href="story.html">相關資訊</a> | 
+        <a href="information.html">聯絡資訊</a> |
+        <a href="cart.html" style="color:#fff;">🛒 購物車明細</a>
+    </nav>
 
     <div class="main-layout">
-        <div class="content-area" style="flex:1;">
+        <div class="content-area" style="flex:1; max-width: 900px; margin: 0 auto;">
             <h2>🛒 您的預算估價單 (暫存項目)</h2>
-            <div class="warning-box">💡 提示：本單開立後可保留 24 小時。請攜帶代碼至門市取貨。</div>
+            <div class="warning-box">💡 提示：本單開立後可保留 24 小時。請將本畫面截圖或攜帶清單代碼至門市取貨。</div>
 
             <table class="coolpc-table">
                 <thead>
                     <tr>
-                        <th width="10%">刪除</th>
+                        <th width="10%">操作</th>
                         <th width="60%">已選購品項名稱</th>
                         <th width="10%">數量</th>
                         <th width="20%">小計 (含稅)</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="#" style="color:#ef4444;">[刪除]</a></td>
-                        <td>【旗艦】CyberPower X1 處理器 (16核/32緒)</td>
-                        <td>1</td>
-                        <td class="coolpc-price">$29,900</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" style="color:#ef4444;">[刪除]</a></td>
-                        <td>【高速傳輸】Titan 2TB NVMe M.2 固態硬碟</td>
-                        <td>1</td>
-                        <td class="coolpc-price">$4,500</td>
-                    </tr>
-                    <tr style="background:#1e3a8a;">
-                        <td colspan="3" style="text-align:right; font-weight:bold; color:#fff;">總計金額：</td>
-                        <td class="coolpc-price" style="font-size:16px; color:#f59e0b;">$34,400</td>
-                    </tr>
-                </tbody>
+                <tbody id="cart-items-tbody">
+                    </tbody>
             </table>
 
-            <div style="margin-top:20px; text-align:right;">
-                <button style="background:#64748b; color:white; border:none; padding:10px 20px; font-weight:bold; cursor:pointer; margin-right:10px;">🖨️ 列印此估價單</button>
-                <button style="background:#22c55e; color:black; border:none; padding:10px 20px; font-weight:bold; cursor:pointer;" onclick="alert('訂單已送出！網路部將於1小時內電話與您確認規格。')">🚀 送出訂單，前往門市取貨</button>
+            <div style="margin-top:20px; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <button id="clear-cart-btn" style="background:#ef4444; color:white; border:none; padding:8px 15px; font-weight:bold; cursor:pointer; border-radius:3px;">
+                        🗑️ 清空估價單
+                    </button>
+                </div>
+                <div style="text-align:right;">
+                    <button id="print-cart-btn" style="background:#64748b; color:white; border:none; padding:10px 20px; font-weight:bold; cursor:pointer; margin-right:10px; border-radius:3px;">
+                        🖨️ 列印此估價單
+                    </button>
+                    <button id="checkout-stub-btn" style="background:#22c55e; color:black; border:none; padding:10px 20px; font-weight:bold; cursor:pointer; border-radius:3px;">
+                        ✔️ 確認送出訂單
+                    </button>
+                </div>
+            </div>
+            
+            <div style="margin-top: 25px; text-align: center;">
+                <a href="catalog.html" style="color: #38bdf8; text-decoration: none; font-weight: bold;">← 返回商品目錄繼續勾選零件</a>
             </div>
         </div>
     </div>
 
     <footer>
         <p>網頁中所有產品型號、價格與圖片均為非真實數據。</p>
-        <p>&copy; 2026 漲價屋酷斃風格 3C 專賣店 版權所有. 本網站僅供網頁設計練習使用.</p>
+        <p>&copy; 2026 漲價屋風格 3C 專賣店 版權所有. 本網站僅供網頁設計練習使用.</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
